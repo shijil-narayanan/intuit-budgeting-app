@@ -1,0 +1,17 @@
+
+.month{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    padding: 5px;
+    flex-wrap: wrap;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    border:1px dotted black;
+    border-radius: 6px;
+}
+
+.month.active{
+    border:2px solid #6366F1; 
+}

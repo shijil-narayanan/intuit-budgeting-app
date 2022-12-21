@@ -1,0 +1,27 @@
+
+
+.sticky{
+    position: sticky; top: 0;
+}
+
+.header{
+    background-color: white;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+aside {
+    font-size: 1.5rem;
+    transition: all 300ms ease-in-out;
+  }
+  
+.to-right {
+    margin-left: 200px;
+    transition: all 300ms ease-in-out;
+}
+
+.main-content{
+    padding:1rem;
+}
+  

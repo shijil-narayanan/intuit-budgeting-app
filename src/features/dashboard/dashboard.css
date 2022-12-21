@@ -1,0 +1,38 @@
+
+
+.entity-card{
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.entity-label{
+    font-size: 17px;
+    margin-bottom: 20px;
+    color:#6c757d;
+}
+
+
+.account-item, .budget-item{
+    margin: 25px 20px;
+}
+
+.account-name, .account-amount, .budget-amount, .budget-name{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.account-amount, .budget-amount{
+    font-weight: 500;
+}
+.no-data-found{
+    font-size:15px;
+    color:#495057;
+}
+
+.go-to-link{
+    font-size: 15px;
+    margin-top:20px;
+    color: #6366F1;
+}

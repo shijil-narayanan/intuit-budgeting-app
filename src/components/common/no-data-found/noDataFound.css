@@ -1,0 +1,18 @@
+
+
+.no-data-content{
+    text-align: center;
+    margin-top:100px;
+}
+
+.go-to-btn, .subtitle-text, .no-data-found-text{
+    margin-bottom:2rem;
+}
+
+.no-data-found-text{
+    font-size: 1.5rem;
+}
+
+.subtitle-text{
+    font-size: 1rem;
+}

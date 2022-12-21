@@ -1,0 +1,13 @@
+.table-header h5{
+    font-size:16px;
+}
+
+.add-item-block{
+    margin-left:20px;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
