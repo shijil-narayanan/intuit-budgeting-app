@@ -114,7 +114,7 @@ export default function Transactions(){
 
                 <div className="field">
                     <label htmlFor="detail">Amount</label>
-                    <InputNumber value={item.amount} onValueChange={(e) => action.updateItem('amount', (item.type ===  'spent' ? e.value * -1 : e.value))} />
+                    <InputNumber value={item.amount} onValueChange={(e) => action.updateItem('amount', (item.type ===  'spent' ? Math.abs(e.value) * -1 : Math.abs(e.value)))} />
                     {submitted && !item.amount && <small className="p-error">Amount is required.</small>}
                 </div>
                 {tags.length > 0 && <div className="field">

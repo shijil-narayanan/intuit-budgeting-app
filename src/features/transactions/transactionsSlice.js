@@ -111,8 +111,11 @@ export default transactionsSlice.reducer;
 export const selectAllTransactions = (state) => state.transactions.transactions;
 
 export const selectTransactionsByAccountId = (state, accountId) => accountId === 'all' ?
-         state.transactions.transactions : state.transactions.transactions.filter(transaction => transaction.accountId === accountId)
+         state.transactions.transactions : state.transactions.transactions.filter(transaction => transaction.accountId === accountId);
 
+/*
+    output : map of transactions with account id against total balance against each account
+*/
 export const selectTransactionSumPerAccount = (state) => {
     const accountTransactionMap = {};
     const transactions = state.transactions.transactions.slice();
@@ -123,6 +126,11 @@ export const selectTransactionSumPerAccount = (state) => {
     return accountTransactionMap;
 }
 
+
+/*
+    input : selected month
+    output: array of transaction filtered by selected month with sum calculated against each category  [{category, amount}]
+*/
 export const selectTransactionSumPerCategoryByMonth = (state, {month}) => {
     const transactions = state.transactions.transactions.filter(({date}) => new Date(date).getMonth() === month);
     return transactions.map(({category}) => ({category , amount: transactions.filter(t => t.category === category).reduce((acc, cur) => acc + cur.amount, 0) }))
@@ -130,6 +138,10 @@ export const selectTransactionSumPerCategoryByMonth = (state, {month}) => {
 
 }
 
+/*
+    input : selected month
+    output: array of transaction filtered by selected month with sum calculated against each transactions  [{tagName, amount}]
+*/
 export const selectTransactionSumPerTagByMonth = (state, {month}) => {
     const allTransactions = state.transactions.transactions.filter(({date}) => new Date(date).getMonth() === month);
     const totalAmount = allTransactions.reduce((acc, cur) => acc + cur.amount, 0)

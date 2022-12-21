@@ -7,6 +7,7 @@ import { Chart } from 'primereact/chart';
 import NoDataFound from '../../components/no-data-found/noDataFound';
 import Table from '../../components/common/table/table';
 export default function Trends(){
+    
     const [activeTabIndex, setActiveTabIndex] = useState(0);
     const {categoryChartData,tagsChartData, selectedMonth, setSelectedMonth, transactionsByTagPerMonth, transactionsByCategoryPerMonth, transactionsRetrieveStatus} = useTrends();
     const monthSelectionTemplate = () =>  <MonthSelector currentYear={new Date().getFullYear()} currentMonth={selectedMonth} handleClick={setSelectedMonth}></MonthSelector>
@@ -20,6 +21,7 @@ export default function Trends(){
             {field: 'amount', label: 'Amount'},
         ],
     }
+
     const categoryTableConfig = {
         dataKey: 'category',
         headerText: 'Category Transactions',

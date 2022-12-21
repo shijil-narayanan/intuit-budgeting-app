@@ -11,11 +11,12 @@
     font-size: 17px;
     text-transform: capitalize;
     color: var(--text-black);
+    margin-bottom:1rem;
 }
 
 
 .account-item, .budget-item{
-    margin: 25px 20px;
+    margin:0 25px 25px;
 }
 
 .account-name, .account-amount, .budget-amount, .budget-name{

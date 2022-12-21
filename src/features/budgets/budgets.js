@@ -16,7 +16,6 @@ import { useTransactions } from '../../hooks/useTransactions';
 import { Card } from 'primereact/card';
 import MonthSelector from '../../components/month-selector/monthSelector';
 
-
 export default function Budgets(){
     const currentYear = new Date().getFullYear();
     const {budgets, addBudget, deleteBudget, updateBudget ,selectedMonth, setSelectedMonth, totalIncome, totalBudgetAmount, budgetsRetrieveStatus: budgetStatus } = useBudgets();
@@ -37,7 +36,7 @@ export default function Budgets(){
             </>
         );
     }
-    const rightToolbarTemplate = () => {
+    const addBudgetTemplate = () => {
         return (
             <>
                 <Button label="Add Budget" icon="pi pi-plus" className="p-button-outlined mr-2" onClick={dialog.openAddItemDialog} />
@@ -45,7 +44,7 @@ export default function Budgets(){
         )
     }
 
-    const leftToolbarTemplate = () => {
+    const showBalanceTemplate = () => {
         const spentAmount = totalBudgetAmount - totalIncome;
         const left = totalIncome - spentAmount
         return (
@@ -91,7 +90,7 @@ export default function Budgets(){
             <Toast ref={toast} />
             <div className="card">
                 <Toolbar className="mb-4" left={monthSelectionTemplate}></Toolbar>
-                <Toolbar className="mb-4" left={leftToolbarTemplate} right={rightToolbarTemplate}></Toolbar>
+                <Toolbar className="mb-4" left={showBalanceTemplate} right={addBudgetTemplate}></Toolbar>
                 <Table {...tableConfig} value={budgets} loading={transactionStatus === 'idle' && budgetStatus === 'idle'}></Table>
             </div>
             <UpdateItemDialog header="Budget Details"

@@ -1,6 +1,6 @@
 
 
-export const API_BASE  = 'https://crudcrud.com/api/ea622b69d4964c91a259b6ef7bfccad3';
+export const API_BASE  = 'https://crudcrud.com/api/1126fd03bcab427ba0c6550737870250'; // capable of serving 1Lac request for 30days, expiry on 21st Jan 2023
 
 export const ACCOUNT_CATEGORIES = [
     {label: 'Cash', value: 'cash'},

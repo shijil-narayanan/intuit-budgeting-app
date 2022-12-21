@@ -1,6 +1,4 @@
-
-
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useMemo} from 'react';
 import { useSelector, useDispatch  } from 'react-redux';
 import { getTransactionsAsync, addTransactionAsync, deleteTransactionAsync, updateTransactionAsync, selectTransactionsByAccountId, selectTransactionSumPerAccount, selectTransactionSumPerCategoryByMonth } from '../features/transactions/transactionsSlice';
 
@@ -11,10 +9,8 @@ export function useTransactions(query = {}){
     const transactions = useSelector((state) => selectTransactionsByAccountId(state, selectedAccountId));
     const transactionSumPerAccount = useSelector(selectTransactionSumPerAccount);
     const transactionsByCategoryPerMonth = useSelector((state) => selectTransactionSumPerCategoryByMonth(state, query));
-    const transactionsTotal = transactions.reduce((acc, cur) => acc + cur.amount, 0);
+    const transactionsTotal = useMemo(() => transactions.reduce((acc, cur) => acc + cur.amount, 0), [transactions]);
     const transactionsRetrieveStatus = useSelector((state) => state.transactions.transactionsRetrieveStatus);
-
-    const error = useSelector((state) => state.transactions.error);
 
     const addTransaction = (payload) => {
         dispatch(addTransactionAsync(payload));
@@ -34,6 +30,17 @@ export function useTransactions(query = {}){
         }
     }, [transactionsRetrieveStatus, dispatch]);
 
-    return {transactions,transactionSumPerAccount,transactionsTotal, transactionsRetrieveStatus, error, addTransaction, deleteTransaction, updateTransaction,selectedAccountId, setSelectedAccountId, transactionsByCategoryPerMonth}
+    return {
+        transactions,
+        transactionSumPerAccount,
+        transactionsTotal, 
+        selectedAccountId,
+        transactionsByCategoryPerMonth,
+        transactionsRetrieveStatus, 
+        addTransaction, 
+        deleteTransaction, 
+        updateTransaction, 
+        setSelectedAccountId
+    }
 }
 

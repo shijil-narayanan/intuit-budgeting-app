@@ -30,6 +30,16 @@ export function useBudgets(){
         }
     }, [budgetsRetrieveStatus, dispatch]);
 
-    return {budgets, budgetsRetrieveStatus, addBudget, deleteBudget, updateBudget, selectedMonth,setSelectedMonth, totalBudgetAmount, totalIncome}
+    return {
+        budgets,
+        selectedMonth,
+        totalBudgetAmount,
+        totalIncome,
+        budgetsRetrieveStatus, 
+        addBudget, 
+        deleteBudget, 
+        updateBudget,
+        setSelectedMonth 
+    }
 }
 
