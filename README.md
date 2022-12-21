@@ -1,8 +1,4 @@
-## Project Name & Pitch
-
-#### Example:
-
-Intuit Budget App 
+## Intuit Budget App 
 
 An application used to manage expenses, built with React, Redux, JavaScript, and CSS.
 
