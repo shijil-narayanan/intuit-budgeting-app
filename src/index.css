@@ -96,3 +96,6 @@ a, .cursor-pointer{
 .p-toolbar{
   padding: 1rem !important;
 }
+.confirmation-content span{
+  margin-left: 15px;
+}
