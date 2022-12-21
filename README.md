@@ -27,7 +27,7 @@ To visit App:
 ## Reflection
 
 
-The backend server used is a third party api service crudcrud [here](https://crudcrud.com/)  with an limitation of 1 lac request for 30 days.It allows all CRUD activities.
+The backend server used is a third party api service [crudcrud](https://crudcrud.com/)  with an limitation of 1 lac request for 30 days.It allows all CRUD activities.
 
 There are few areas of improvement/enhancement which is on the checklist as
 * Authentication of users
