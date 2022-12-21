@@ -3,16 +3,11 @@
 An application used to manage expenses, built with React, Redux, JavaScript, and CSS.
 
 ## Project Status
-(only necessary if incomplete)
-
-#### Example:
 
 This project is currently in MVP stage. Users can add accounts, mention transactions accross accounts, track expenses on monthly basis, associate tags against transactions and check trends of transactions on monthly basis.
 
 
 ## Installation and Setup Instructions
-
-#### Example:  
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
@@ -24,7 +19,6 @@ To start App:
 
 `npm start`  
  
-
 To Visit App:
 
 `localhost:3000`  
