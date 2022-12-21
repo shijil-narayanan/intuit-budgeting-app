@@ -33,7 +33,7 @@ There are few areas of improvement/enhancement which is TODO are
 * Authentication of users
 * Disallowing of duplicate tag creation
 * Showing transaction of previous years
-* Deleting account should delete all the transactions associated with it.
+* Deleting account should delete all the transactions associated with it, currently third party api service do not support bulk deletion.
 * Memoizing data returned by useSelector used in hooks.
 
   
