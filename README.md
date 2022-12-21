@@ -29,7 +29,7 @@ To visit App:
 
 The backend server used is a third party api service [crudcrud](https://crudcrud.com/)  with a limitation of 1 lac request for 30 days.It allows all CRUD activities.
 
-There are few areas of improvement/enhancement which is on the checklist as
+There are few areas of improvement/enhancement which is TODO are
 * Authentication of users
 * Disallowing of duplicate tag creation
 * Showing transaction of previous years
