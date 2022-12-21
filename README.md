@@ -1,6 +1,7 @@
 ## Intuit Budget App 
 
-An application used to manage expenses, built with React, Redux, JavaScript, and CSS.Click [here](https://intuit-budget-app.web.app/) for demo
+An application used to manage expenses, built with React, Redux, JavaScript, and CSS. 
+Click [here](https://intuit-budget-app.web.app/) for demo
 
 ## Project Status
 
