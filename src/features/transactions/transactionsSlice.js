@@ -17,7 +17,6 @@ const initialState = {
 export const getTransactionsAsync = createAsyncThunk(
 	'transactions/getTransactionsAsync',
 	async (payload) => {
-        console.log('payload', payload)
         const response = await http.get('/transactions');
         return response.data;
 	}

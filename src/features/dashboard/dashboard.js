@@ -23,7 +23,6 @@ export default function Dashboard(){
                         </div>
                     ))}
                     {!accounts.length && accountsRetrieveStatus === 'succeeded' && <div className="no-data-found">No accounts added yet.</div>}
-                    {accountsRetrieveStatus === 'idle' && <div className="no-data-found">Loading...</div>}
                     <Link to={'/accounts'} className="go-to-link">Go to accounts</Link>
                 </div>
                 <div className="entity-card"  style={{width: '100%'}}>

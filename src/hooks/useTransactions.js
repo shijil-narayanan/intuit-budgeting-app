@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from 'react';
 import { useSelector, useDispatch  } from 'react-redux';
-import { getTransactionsAsync, addTransactionAsync, deleteTransactionAsync, updateTransactionAsync, selectTransactionsByAccountId, selectTransactionSumPerAccount, selectTransactionSumPerCategoryByMonth, selectTransactionSumPerTagByMonth } from '../features/transactions/transactionsSlice';
+import { getTransactionsAsync, addTransactionAsync, deleteTransactionAsync, updateTransactionAsync, selectTransactionsByAccountId, selectTransactionSumPerAccount, selectTransactionSumPerCategoryByMonth } from '../features/transactions/transactionsSlice';
 
 export function useTransactions(query = {}){
     const dispatch = useDispatch();
@@ -11,7 +11,6 @@ export function useTransactions(query = {}){
     const transactions = useSelector((state) => selectTransactionsByAccountId(state, selectedAccountId));
     const transactionSumPerAccount = useSelector(selectTransactionSumPerAccount);
     const transactionsByCategoryPerMonth = useSelector((state) => selectTransactionSumPerCategoryByMonth(state, query));
-    const transactionsByTagPerMonth = useSelector((state) => selectTransactionSumPerTagByMonth(state, query));
     const transactionsTotal = transactions.reduce((acc, cur) => acc + cur.amount, 0);
     const transactionsRetrieveStatus = useSelector((state) => state.transactions.transactionsRetrieveStatus);
 
@@ -35,6 +34,6 @@ export function useTransactions(query = {}){
         }
     }, [transactionsRetrieveStatus, dispatch]);
 
-    return {transactions,transactionSumPerAccount,transactionsTotal, transactionsRetrieveStatus, error, addTransaction, deleteTransaction, updateTransaction,selectedAccountId, setSelectedAccountId, transactionsByCategoryPerMonth, transactionsByTagPerMonth}
+    return {transactions,transactionSumPerAccount,transactionsTotal, transactionsRetrieveStatus, error, addTransaction, deleteTransaction, updateTransaction,selectedAccountId, setSelectedAccountId, transactionsByCategoryPerMonth}
 }
 

@@ -16,8 +16,7 @@ const initialState = {
 
 export const getTagsAsync = createAsyncThunk(
 	'tags/getTagsAsync',
-	async (payload) => {
-        console.log('payload', payload)
+	async () => {
         const response = await http.get('/tags');
         return response.data;
 	}

@@ -16,8 +16,7 @@ const initialState = {
 
 export const getBudgetsAsync = createAsyncThunk(
 	'budgets/getBudgetsAsync',
-	async (payload) => {
-        console.log('payload', payload)
+	async () => {
         const response = await http.get('/budgets');
         return response.data;
 	}

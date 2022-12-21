@@ -7,7 +7,10 @@ export default function MonthSelector({currentMonth, handleClick, currentYear}){
 
     return (
         <>
-        {months.map(({label,id}) => (<div  key={id} onClick={() => handleClick(id)} className={"month " + classNames({ 'active': id === currentMonth })} >{label} {currentYear}</div>))}
+        <div className="month-container">
+            {months.map(({label,id}) => (<div  key={id} onClick={() => handleClick(id)} className={"month " + classNames({ 'active': id === currentMonth })} >{label} {currentYear}</div>))}
+        </div>
+        
        </>
     )
 }

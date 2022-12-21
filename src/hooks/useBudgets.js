@@ -11,7 +11,6 @@ export function useBudgets(){
     const totalBudgetAmount = budgets.reduce((acc, cur) => acc + cur.amount, 0);
     const totalIncome = budgets.filter(budget => budget.category === 'income').reduce((acc, cur) => acc + cur.amount, 0);
     const budgetsRetrieveStatus = useSelector((state) => state.budgets.budgetsRetrieveStatus);
-    const error = useSelector((state) => state.budgets.error);
 
     const addBudget = (payload) => {
         dispatch(addBudgetAsync(payload));
@@ -31,6 +30,6 @@ export function useBudgets(){
         }
     }, [budgetsRetrieveStatus, dispatch]);
 
-    return {budgets, budgetsRetrieveStatus, error, addBudget, deleteBudget, updateBudget, selectedMonth,setSelectedMonth, totalBudgetAmount, totalIncome}
+    return {budgets, budgetsRetrieveStatus, addBudget, deleteBudget, updateBudget, selectedMonth,setSelectedMonth, totalBudgetAmount, totalIncome}
 }
 

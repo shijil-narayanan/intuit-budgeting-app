@@ -16,8 +16,7 @@ const initialState = {
 
 export const getAccountsAsync = createAsyncThunk(
 	'accounts/getAccountsAsync',
-	async (payload) => {
-        console.log('payload', payload)
+	async () => {
         const response = await http.get('/accounts');
         return response.data;
 	}

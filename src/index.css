@@ -1,6 +1,14 @@
 
-
-
+:root {
+  --primary:  #6366F1;
+  --text-color-grey: #495057;
+  --text-color-light-grey:#6c757d;
+  --text-red: red;
+  --text-green: green;
+  --text-white: #fff;
+  --primary-selected:  #363885;
+  --grey-border: #dee2e6;
+}
 
 body {
   margin: 0;
@@ -78,11 +86,11 @@ a, .cursor-pointer{
 }
 
 .amount.red{
-  color: red;
+  color:var(--text-red);
 }
 
 .amount.green{
-  color: green;
+  color:var(--text-green);
 }
 .p-toolbar{
   padding: 1rem !important;

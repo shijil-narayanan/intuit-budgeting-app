@@ -8,7 +8,6 @@ export function useTags(){
     const dispatch = useDispatch();
     const tags = useSelector(selectAllTags);
     const tagsRetrieveStatus = useSelector((state) => state.tags.tagsRetrieveStatus);
-    const error = useSelector((state) => state.tags.error);
 
     const addTag = (payload) => {
         dispatch(addTagAsync(payload));
@@ -28,6 +27,6 @@ export function useTags(){
         }
     }, [tagsRetrieveStatus, dispatch]);
 
-    return {tags, tagsRetrieveStatus, error, addTag, deleteTag, updateTag}
+    return {tags, tagsRetrieveStatus, addTag, deleteTag, updateTag}
 }
 

@@ -8,7 +8,6 @@ export function useAccounts(){
     const dispatch = useDispatch();
     const accounts = useSelector(selectAllAccounts);
     const accountsRetrieveStatus = useSelector((state) => state.accounts.accountsRetrieveStatus);
-    const error = useSelector((state) => state.accounts.error);
 
     const addAccount = (payload) => {
         dispatch(addAccountAsync(payload));
@@ -29,6 +28,6 @@ export function useAccounts(){
         }
     }, [accountsRetrieveStatus, dispatch]);
 
-    return {accounts, accountsRetrieveStatus, error, addAccount, deleteAccount, updateAccount}
+    return {accounts, accountsRetrieveStatus, addAccount, deleteAccount, updateAccount}
 }
 
