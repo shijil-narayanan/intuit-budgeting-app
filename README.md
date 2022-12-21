@@ -5,7 +5,7 @@ Click [here](https://intuit-budget-app.web.app/) for demo
 
 ## Project Status
 
-This project is currently in MVP stage. Users can add accounts, mention transactions accross accounts, track expenses on monthly basis, associate tags against transactions and check trends of transactions on monthly basis.
+This project is currently in MVP stage. Users can add accounts, mention transactions accross accounts, track expenses on monthly basis, associate tags against transactions and check trends of their expense on monthly basis.
 
 
 ## Installation and Setup Instructions
