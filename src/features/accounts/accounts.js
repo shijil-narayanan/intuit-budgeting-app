@@ -6,7 +6,6 @@ import { Toast } from 'primereact/toast';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
-import './accounts.module.css';
 import Table from '../../components/common/table/table';
 import useTableCrud from '../../hooks/useTableCrud';
 import DeleteItemDialog from '../../components/common/dialog/delete-item/deleteItemDialog';

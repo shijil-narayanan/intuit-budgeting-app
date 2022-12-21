@@ -7,7 +7,6 @@ import { Button } from 'primereact/button';
 import { Toolbar } from 'primereact/toolbar';
 import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
-import './budgets.css';
 import Table from '../../components/common/table/table';
 import { BUDGET_CATEGORIES as budgetCategories } from '../../app/config';
 import useTableCrud from '../../hooks/useTableCrud';

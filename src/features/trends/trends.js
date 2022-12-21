@@ -4,7 +4,7 @@ import { Toolbar } from 'primereact/toolbar';
 import { TabView, TabPanel } from 'primereact/tabview';
 import useTrends from '../../hooks/useTrends';
 import { Chart } from 'primereact/chart';
-import NoDataFound from '../../components/common/no-data-found/noDataFound';
+import NoDataFound from '../../components/no-data-found/noDataFound';
 import Table from '../../components/common/table/table';
 export default function Trends(){
     const [activeTabIndex, setActiveTabIndex] = useState(0);
